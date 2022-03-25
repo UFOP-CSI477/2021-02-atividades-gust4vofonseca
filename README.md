@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Gustavo Silva da Fonseca 
+- Matrícula: 18.1.8165
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 
+- Link para o seu GitHub: [@gust4vofonseca:](https://github.com/gust4vofonseca)
 
 ## [Projeto final:](./Projeto/README.md)
 
