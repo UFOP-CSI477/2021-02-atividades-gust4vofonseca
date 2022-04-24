@@ -10,4 +10,4 @@
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+O trablho tera a finalidade de controle de varias carteiras de investimentos, podendo fazer a gerencia de varias tipos de ativos em cada carteria, fazendo o controle de compra e venda.
