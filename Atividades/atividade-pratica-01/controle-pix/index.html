@@ -12,19 +12,22 @@
 </head>
 <body>
     
-    <div class="container">
-        <input type="text" name="key" id="key" placeholder="Chave">
-        <input type="number" name="value" id="value" placeholder="Valor">
-        <input type="number" name="duracao" id="duracao" placeholder="Duração (h)">
-        <select name="bank" id="bank">
-            
+   <div>
+        <input type="text" id="key" placeholder="Chave pix">
+        <input type="number" id="value" placeholder="Valor">
+        <select name="event" id="event">
+            <option value="send">Enviar</option>
+            <option value="receive">Receber</option>
         </select>
-        <button onclick="calcular()">Calcular</button>
+        <select name="bank" id="bank"></select>
+        <button onclick="create()">Enviar</button>
+    </div>
 
-        <div id="resultado"></div>
-    </div><!--container-->
+    <div id="transactions">
 
+    </div>
 
     <script src="./js/script.js"></script>
+
 </body>
 </html>
