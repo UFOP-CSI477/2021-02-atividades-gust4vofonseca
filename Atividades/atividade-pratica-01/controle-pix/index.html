@@ -11,20 +11,37 @@
     <title>Controle Pix</title>
 </head>
 <body>
-    
+    <h1>Controle De PIX</h1>
    <div>
-        <input type="text" id="key" placeholder="Chave pix">
-        <input type="number" id="value" placeholder="Valor">
-        <select name="event" id="event">
+       <h2>Efetuar uma transação</h2>
+        <input type="text" id="key" placeholder="Chave pix" required>
+        <input type="number" id="value" placeholder="Valor" required>
+        <select name="event" id="event" required>
             <option value="send">Enviar</option>
             <option value="receive">Receber</option>
         </select>
-        <select name="bank" id="bank"></select>
+        <select name="bank" id="bank"></select required>
         <button onclick="create()">Enviar</button>
+        
+    </div>
+
+    <div id="balance">
+        <h2>Saldo na carteira</h2>
+        <div id="totalBalance">
+            R$ 0,00
+        </div>
+        <h3>Total de pix enviado</h3>
+        <div id="totalSend">
+            R$ 0,00
+        </div>
+        <h3>Total de pix recebido</h3>
+        <div id="totalReceived">
+            R$ 0,00
+        </div>
     </div>
 
     <div id="transactions">
-
+        <h2>Historico</h2>
     </div>
 
     <script src="./js/script.js"></script>
