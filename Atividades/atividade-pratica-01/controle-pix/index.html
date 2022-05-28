@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     
     <title>Controle Pix</title>
 </head>
 <body>
     <h1>Controle De PIX</h1>
-   <div>
+   <div id="carryOut">
        <h2>Efetuar uma transação</h2>
         <input type="text" id="key" placeholder="Chave pix" required>
         <input type="number" id="value" placeholder="Valor" required>
@@ -21,7 +21,7 @@
             <option value="receive">Receber</option>
         </select>
         <select name="bank" id="bank"></select required>
-        <button onclick="create()">Enviar</button>
+        <button onclick="create()">Concluir</button>
         
     </div>
 
