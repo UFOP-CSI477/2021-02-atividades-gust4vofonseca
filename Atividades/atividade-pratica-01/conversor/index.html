@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Converter moeda</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Converter moedas</h1>
+    <div>
+        <div>
+            <input type="number" id="value01" placeholder="Valor01" required>
+        </div>
+        <div id="selects">
+            <select name="selectValue01" id="selectValue01">
+                <option value="100">Moeda 01</option>
+            </select>
+            <select name="selectValue02" id="selectValue02">
+                <option value="100">Moeda 02</option>
+            </select>
+        </div>
+        <div>
+            <input type="date" name="date" id="date">
+        </div>
+        <button onclick="valorMoedas()">Converter</button>
+    </div>
+
+    <div id="result">
+
+    </div>
 
     <script src="./script.js"></script>
 </body>
