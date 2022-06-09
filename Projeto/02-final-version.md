@@ -16,6 +16,7 @@ E possivel a criação de varias carteiras para um mesmo usuario e tambem varias
   
 ### 2. Funcionalidades previstas e não implementadas
 <!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
+Era previsto fazer um algoritmo para fazer o calculo se esta obtendo lucro ou perda nas ações, mas não foi possivel ser implementado por deixar para ultima hora.
 
 ### 3. Outras funcionalidades implementadas
 <!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
@@ -30,3 +31,4 @@ Na api, e preciso ser instalado os node_modules com yarn ou npm, depois disso ba
 
 ### 6. Referências
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
+Esse trabalho foi desenvolvido com aulas do curso da rocketseat, um excelente curso para web.
