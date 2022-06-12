@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, OneToOne, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, OneToMany, OneToOne, PrimaryColumn, UpdateDateColumn } from "typeorm";
 import { Equipamentos } from "./Equipamentos";
 import { Users } from "./Users";
 import { v4 as uuidV4 } from "uuid";
@@ -11,7 +11,7 @@ class Registros {
     @Column()
     equipamento_id: string;
 
-    @OneToOne(() => Equipamentos, {
+    @ManyToMany(() => Equipamentos, {
         cascade: true,
     })
     @JoinColumn({name: "equipamento_id"})
@@ -20,7 +20,7 @@ class Registros {
     @Column()
     user_id: string;
 
-    @OneToOne(() => Users, {
+    @ManyToMany(() => Users, {
         cascade: true,
     })
     @JoinColumn({name: "user_id"})

@@ -34,6 +34,18 @@ class RegistrosRepository implements IRegistrosRepository {
         return registros;
     }
 
+    async findByEquipamentos(equipamento_id: string): Promise<Registros[]> {
+        const registros = await this.repository.find({equipamento_id});
+        
+        return registros;
+    }
+
+    async findByUsers(user_id: string): Promise<Registros[]> {
+        const registros = await this.repository.find({user_id});
+        
+        return registros;
+    }
+
 }
 
 export { RegistrosRepository }

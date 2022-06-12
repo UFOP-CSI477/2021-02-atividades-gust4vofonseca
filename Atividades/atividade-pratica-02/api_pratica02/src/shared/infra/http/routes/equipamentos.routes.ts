@@ -19,7 +19,7 @@ const searchEquipamentosController = new SearchEquipamentosController();
 equipamentoRoutes.post('/', ensureAuthenticate, createEquipamentosController.handle);
 equipamentoRoutes.post('/delete', ensureAuthenticate, deleteEquipamentosController.handle);
 equipamentoRoutes.post('/update', ensureAuthenticate, updateEquipamentosController.handle);
-equipamentoRoutes.post('/list', listAllEquipamentosController.handle);
+equipamentoRoutes.get('/list', listAllEquipamentosController.handle);
 equipamentoRoutes.post('/search', searchEquipamentosController.handle);
 
 export { equipamentoRoutes };

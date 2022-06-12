@@ -4,10 +4,9 @@ import { CreateRegistroUseCase } from './CreateRegistroUseCase';
 
 class CreateRegistroController {
     async handle(request: Request, response: Response): Promise<Response> {
-
+        const { id } = request.user; 
         const {
             equipamento_id,
-            user_id,
             descricao,
             dataLimite,
             tipo
@@ -17,7 +16,7 @@ class CreateRegistroController {
 
         await createRegistroUseCase.execute({
             equipamento_id,
-            user_id,
+            user_id: id,
             descricao,
             dataLimite,
             tipo
