@@ -10,20 +10,28 @@ class EquipamentosRepository implements IEquipamentosRepository {
         this.repository = getRepository(Equipamentos);
     }
 
-    create({nome}: ICreateEquipamentosDTO): Promise<void> {
-        throw new Error("Method not implemented.");
+    async create({nome}: ICreateEquipamentosDTO): Promise<void> {
+        const equipamento = this.repository.create({
+            nome
+        })
+ 
+        await this.repository.save(equipamento);
     }
-    update(equipamentos: Equipamentos): Promise<void> {
-        throw new Error("Method not implemented.");
+    async update(equipamentos: Equipamentos): Promise<void> {
+        await this.repository.save(equipamentos);
     }
-    delete(id: string): Promise<void> {
-        throw new Error("Method not implemented.");
+    async delete(id: string): Promise<void> {
+        await this.repository.delete(id);
     }
-    findById(id: string): Promise<Equipamentos> {
-        throw new Error("Method not implemented.");
+    async findById(id: string): Promise<Equipamentos> {
+        const equipamento = await this.repository.findOne(id);
+
+        return equipamento;
     }
-    listAll(): Promise<Equipamentos[]> {
-        throw new Error("Method not implemented.");
+    async listAll(): Promise<Equipamentos[]> {
+        const equipamentos = await this.repository.find();
+
+        return equipamentos
     }
 
 }

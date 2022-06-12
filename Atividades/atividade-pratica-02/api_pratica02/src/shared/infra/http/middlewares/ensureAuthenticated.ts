@@ -1,4 +1,4 @@
-import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
+import { UsersRepository } from "@modules/infra/typeorm/repository/UsersRepository";
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
