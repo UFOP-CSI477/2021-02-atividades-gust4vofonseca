@@ -110,11 +110,11 @@ export function Equipamento() {
     }, [])
 
     return (
-        <div>
+        <div className="container">
             <h1>{equipamento?.nome}</h1>
              <ul>
                 {
-                    registros.map(registro => <li key={registro.id}>
+                    registros.map(registro => <li key={registro.id} className="teste">
                         <p>
                         Equipamento: {equipamento?.nome}
                         </p>

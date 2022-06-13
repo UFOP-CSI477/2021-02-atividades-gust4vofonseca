@@ -112,7 +112,7 @@ export function Equipamentos() {
     }, [])
 
     return (
-        <div>
+        <div className="container">
             <div className="container login">
                 <button className="buttonCreate" id="viewButton" onClick={viewCadastrar}>Cadastrar</button>
                 <div id="divView" className="displayInvisible">
@@ -123,7 +123,7 @@ export function Equipamentos() {
             </div>
             <h1>Equipamentos registrados</h1>
             <ul>
-                {equipamentos.map(equipamento => <li key={equipamento.id} id={equipamento.id}>
+                {equipamentos.map(equipamento => <li key={equipamento.id} id={equipamento.id} className="teste">
                     <div>
                         <p><Link to={`/registros/${equipamento.id}`} className="link">{equipamento.nome} </Link></p>
                         <button className="buttonDeleteInput" onClick={() => { deleteEquipamento(equipamento.id)}}>Deletar</button>

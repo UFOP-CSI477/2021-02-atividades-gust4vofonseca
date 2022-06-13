@@ -167,7 +167,7 @@ export function Registros() {
             <h1>Manuteções Registradas</h1>
             <ul>
                 {
-                    registros.map(registro => <li key={registro.id}>
+                    registros.map(registro => <li key={registro.id} className="teste">
                         <p>
                         Equipamento: {equipamentos.map(equipamento => { if (equipamento.id === registro.equipamento_id) {return equipamento.nome} })}
                         </p>
