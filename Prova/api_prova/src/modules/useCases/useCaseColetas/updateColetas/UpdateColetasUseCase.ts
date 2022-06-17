@@ -48,7 +48,7 @@ export class UpdateColetasUseCase {
         }
 
         if (quantidade) {
-            coleta.quantidade;
+            coleta.quantidade = quantidade;
         }
 
         await this.coletasRepository.update(coleta);

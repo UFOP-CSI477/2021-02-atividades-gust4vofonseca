@@ -7,8 +7,8 @@ export class ListAllItemController {
     async handle(request: Request, response: Response): Promise<Response> {
         const listAllItemUseCase = container.resolve(ListAllItemUseCase);
 
-        await listAllItemUseCase.execute();
+        const items = await listAllItemUseCase.execute();
 
-        return response.status(201).send()
+        return response.status(201).json(items)
     }
 }

@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 import { Entidades } from "./Entidades";
 import { Items } from "./Items";
@@ -11,18 +11,18 @@ class Coletas {
     @Column()
     item_id: string;
 
-    @ManyToOne(() => Items)
+    @OneToMany(() => Items, Items.name)
     @JoinColumn({name: "item_id"})
     item: Items;
 
     @Column()
     entidade_id: string;
 
-    @ManyToOne(() => Entidades)
+    @OneToMany(() => Entidades, Entidades.name)
     @JoinColumn({name: "entidade_id"})
     entidade: Entidades;
 
-    @Column({type: "decimal"})
+    @Column()
     quantidade: Number;
 
     @Column({ type: "date" })

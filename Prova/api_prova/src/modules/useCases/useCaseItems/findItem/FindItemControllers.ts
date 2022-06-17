@@ -9,8 +9,8 @@ export class FindItemController {
 
         const findItemUseCase = container.resolve(FindItemUseCase);
 
-        await findItemUseCase.execute(id);
+        const item = await findItemUseCase.execute(id);
 
-        return response.status(201).send()
+        return response.status(201).json(item)
     }
 }

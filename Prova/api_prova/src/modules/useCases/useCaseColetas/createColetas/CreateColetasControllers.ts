@@ -7,6 +7,8 @@ export class CreateColetasController {
     async handle(request: Request, response: Response): Promise<Response> {
         const { entidade_id, item_id, data, quantidade } = request.body;
 
+        console.log(quantidade);
+
         const createColetasUseCase = container.resolve(CreateColetasUseCase);
 
         await createColetasUseCase.execute({
